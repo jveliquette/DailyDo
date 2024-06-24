@@ -9,3 +9,9 @@ Coming soon!
 - **Add Tasks:** Add tasks to any category.
 - **Mark as Completed:** Mark tasks as completed when you finish them.
 - **User-Friendly Interface:** Simple and intuitive design for easy use.
+
+## Technologies Used
+- Python
+- Django
+- CSS3
+- HTML5
