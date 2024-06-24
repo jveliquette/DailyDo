@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/todos.css' %}">
+        <title>
+            {% block title %}{% endblock title %}
+        </title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div>
+                    <h1>dailydo</h1>
+                    <p>task</p>
+                    <p>organizer</p>
+                </div>
+                <nav>
+                    <a href="{% url 'todo_list_list' %}">My Todo Lists</a>
+                    {% block nav-adds %}{% endblock nav-adds %}
+                </nav>
+            </header>
+            <main>
+                {% block content %}{% endblock content %}
+            </main>
+            <footer>
+                <div>
+                    <h2>dailydo</h2>
+                    <p>Created by</p>
+                    <p>Julia Veliquette</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

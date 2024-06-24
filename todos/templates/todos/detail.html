@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ todo_list.name }}{% endblock title %}
+
+{% block nav-adds %}
+    <a href="{% url 'todo_item_create' %}">Create A New Task</a>
+{% endblock nav-adds %}
+
+{% block content %}
+    <div>
+        <div class="title-link-container">
+            <h1 class="page-title">{{ todo_list.name }}</h1>
+            <div class="link-container">
+                <p class="link"><a href="{% url 'todo_list_update' todo_list.id %}">Edit List Name</a></p>
+                <p class="link"><a href="{% url 'todo_list_delete' todo_list.id %}">Delete List</a></p>
+            </div>
+        </div>
+        <h2 class="page-title">Tasks</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in todo_items %}
+            <tr>
+                <td><a href="{% url 'todo_item_update' item.id %}">{{ item.task }}</a></td>
+                <td>{{ item.due_date }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

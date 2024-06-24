@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body, input, textarea, button, select {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+html {
+  background-color: rgb(49, 49, 49);
+  width: 100%;
+}
+
+/* WRAPPER STYLING */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+
+/* HEADER STYLING */
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header div {
+  background-color: rgb(139, 94, 94);
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 5rem;
+  letter-spacing: -6.5px;
+  line-height: 0.5;
+}
+
+header p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  line-height: 0.25;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+  background-color: #cacaca;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.25);
+}
+
+header nav a:hover {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  transition: ease-in 100ms;
+}
+
+/* MAIN SECTION STYLING */
+
+main {
+  background-color: rgb(10, 10, 10);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0,0.25);
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.page-title {
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ffffff78;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table td a {
+  text-decoration: none;
+  color: black;
+}
+
+table td a:hover {
+  color: white;
+}
+
+table th {
+  background-color: #898989;
+}
+
+table tr {
+  background-color: #cacaca;
+}
+
+table tr:hover {
+  background-color: #898989;
+  transition: ease-in 100ms;
+}
+
+/* Make the input tags look nicer */
+input, select {
+  height: 1.5em;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  background-color: #cacaca;
+}
+
+/* Make the select boxes look nicer */
+select {
+  height: 3em;
+}
+
+/* Make the select-multiple boxes look nicer */
+select[multiple] {
+  height: 7.5em;
+}
+
+form label {
+  color: white;
+}
+
+.title-link-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+p a {
+  color: black;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: white;
+}
+
+
+.link-container {
+  background-color: #898989;
+  padding: 0.25rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #cacaca;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #898989;
+  color: white;
+  transition: ease-in 100ms;
+  cursor: pointer;
+}
+
+input[type="text"], select {
+  width: 75%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: rgb(139, 94, 94);
+  box-shadow: 0 0 8px rgba(226, 74, 112, 0.5);
+}
+
+input[type="checkbox"]:focus {
+  border-color: rgb(139, 94, 94);
+  color: rgb(139, 94, 94);
+  background-color: rgb(139, 94, 94);
+}
+
+input[type="text"]:hover, input[type="checkbox"]:hover, select:hover {
+  border-color: #555;
+}
+
+input[type="checkbox"] {
+  background-color: #cacaca;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* FOOTER STYLING */
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer div {
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 5rem;
+}
+
+footer h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 3rem;
+  letter-spacing: -3.5px;
+  line-height: 0.5;
+}
+
+footer p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  line-height: 0.25;
+}

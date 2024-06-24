@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Create a new list{% endblock title %}
+
+{% block content %}
+    <div>
+        <h1 class="page-title">Create a new list</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+    </div>
+{% endblock content %}

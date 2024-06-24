@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}My Todo Lists{% endblock title %}
+
+{% block nav-adds %}
+    <a href="{% url 'todo_list_create' %}">Create a new list</a>
+    <a href="{% url 'todo_item_create' %}">Create a new item</a>
+{% endblock nav-adds %}
+
+{% block content %}
+    <div>
+        <h1 class="page-title">My Lists</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Number of items</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todos in todo_list_object %}
+                    <tr>
+                        <td><a href="{% url 'todo_list_detail' todos.id %}">{{ todos.name }}</a></td>
+                        <td>{{ todos.item_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

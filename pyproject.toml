@@ -1,0 +1,7 @@
+[tool.black]
+line-length = 80
+
+[tool.djlint]
+ignore="H030,H031,H017"
+indent=2
+blank_line_after_tag="load,extends,include"
